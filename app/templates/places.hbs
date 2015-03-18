@@ -1,9 +1,13 @@
 <div class="places">
 
-<h2>All your cool places</h2>
+<h2>Your {{length}} cool places</h2>
+
+{{input value=filter class="filter"}}
+
+<button {{action "sort"}} {{bind-attr class=":sort sortAscending:asc:desc"}}>Sort</button>
 
 <ul class="places-list">
-  {{#each}}
+  {{#each filteredModel}}
   <li class="place">
     {{name}} - {{tags}}
   </li>
