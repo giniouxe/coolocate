@@ -1,0 +1,15 @@
+<div class="places">
+
+<h2>All your cool places</h2>
+
+<ul class="places-list">
+  {{#each}}
+  <li class="place">
+    {{name}} - {{tags}}
+  </li>
+  {{/each}}
+</ul>
+
+</div>
+
+{{outlet}}
